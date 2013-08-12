@@ -23,7 +23,7 @@ package {
     }
     
     public function fonts():Array {
-      return Font.enumerateFonts(true).sortOn("fontName", Array.CASEINSENSITIVE);
+      return Font.enumerateFonts(true);
     }
         
   }
