@@ -18,8 +18,9 @@ package {
     
     private function loadExternalInterface(params:Object):void {
       ExternalInterface.marshallExceptions = true;
-      ExternalInterface.addCallback("fonts", fonts);      
-      ExternalInterface.call(params.onReady, params.swfObjectId);
+      ExternalInterface.addCallback("fonts", fonts);
+      var wrapperFunction:String = "fontListReady";
+      ExternalInterface.call(wrapperFunction, params.swfObjectId);
     }
     
     public function fonts():Array {
